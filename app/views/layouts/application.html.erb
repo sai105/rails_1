@@ -8,8 +8,8 @@
 </head>
 <body>
 
-<%= render 'common/header' %>
-<div class="container">
+<%= render 'common/header' unless fluid_layout  %>
+<div class="<%= fluid_layout ? '' : 'container' %>">
   <%= yield %>
 </div>
 
